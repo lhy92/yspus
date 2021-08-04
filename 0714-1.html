@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴</title>
+    <style>
+        body {
+            font-family: sans-serif;
+			margin: 50px;
+			background: cornflowerblue;
+		}
+		nav a {
+            margin: 0 auto;
+			display:  inline-block;
+			position: relative;
+			margin: 15px 30px;
+			text-decoration: none;
+			font-size: 16px;
+			color: #fff;
+			outline: none;
+            text-align: center;
+		}
+        nav a {
+            padding: 0 20px;
+            height: 45px;
+            line-height: 45px;
+        }
+
+		nav a:before {
+			content: "";
+			position: absolute;
+            display: block;
+            background: rgba(0, 0, 0, 0.3);
+            width: 45px;
+            height: 2px;
+            top: 0;
+            left: 0;
+            transform: rotate(90deg);
+            transform-origin: 0 0;
+            transition: 0.3s;
+		}
+		nav a::after {
+			content: "";
+			position: absolute;
+            display: block;
+            background: rgba(0, 0, 0, 0.3);
+            width: 45px;
+            height: 2px;
+            bottom: 0;
+            right: 0;
+            transform: rotate(90deg);
+            transform-origin: 100% 0;
+            transition: 0.3s;
+		}
+        nav a:hover::before {
+            left: 50%;
+            transform: rotate(0deg);
+            transform: translateX(-50%);
+        }
+        nav a:hover::after {
+            left: 50%;
+            transform: rotate(0deg);
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+		<a href="#" data-hover="HTML">HTML</a>
+		<a href="#" data-hover="CSS">CSS</a>
+		<a href="#" data-hover="Javascript">Javascript</a>
+		<a href="#" data-hover="jQuery">jQuery</a>
+		<a href="#" data-hover="References">References</a>
+	</nav>
+</body>
+</html>
